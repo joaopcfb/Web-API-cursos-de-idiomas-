@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using APICursos.Models;
 using Microsoft.Extensions.Logging;
-using APICursos.Services;
 using APICursos.Infrastructure.Jwt;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
@@ -23,7 +22,6 @@ namespace APICursos.Controllers
         private readonly AppDbContext _context;
 
         private readonly ILogger<UsuariosController> _logger;
-        private readonly IUserService _userService;
         private readonly GerenciadorDeToken _gerenciadorDeToken;
 
         public UsuariosController(AppDbContext context, ILogger<UsuariosController> logger, GerenciadorDeToken gerenciadorDeToken)
